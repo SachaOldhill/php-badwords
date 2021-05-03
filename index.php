@@ -13,6 +13,9 @@
       width: 1170;
       margin: auto;
     }
+    .padding-20{
+      padding: 20px;
+    }
   </style>
   <title></title>
 </head>
@@ -29,9 +32,7 @@
   $badword = $_GET[badword];
   $goodsentence = str_replace($badword, '***', $sentence);
   // $words = explode (' ', $sentence, 3); //tipo split in js, edivide a partire da cio che si trova tra '' e crea un array tra gli elementi separati
-  echo $goodsentence;
-  echo '<br>';
-  echo $badword;
+  echo $sentence;
   // echo " ";
   // echo $words[0];
   // echo '<br>';
@@ -41,6 +42,13 @@
 
 ?>
   </h1>
+  <div class="padding-20">
+    <h1><?php var_dump($sentence); ?></h1>
+  </div>
+  <div class="padding-20">
+    <h1><?php echo $goodsentence; ?></h1>
+    <h1><?php echo $badword; ?></h1>
+  </div>
 </body>
 
 </html>
